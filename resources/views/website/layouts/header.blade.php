@@ -11,23 +11,47 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
             <ul class="navbar-nav">
+
                 <li class="nav-item">
-                    <a class="nav-link active" href="{{ route('frontend.master') }}">Home</a>
+                    <a class="nav-link {{ request()->routeIs('frontend.master') ? 'active' : '' }}"
+                        href="{{ route('frontend.master') }}">
+                        Home
+                    </a>
                 </li>
+
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('frontend.about') }}">About</a>
+                    <a class="nav-link {{ request()->routeIs('frontend.about') ? 'active' : '' }}"
+                        href="{{ route('frontend.about') }}">
+                        About
+                    </a>
                 </li>
+
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('frontend.service') }}">Services</a>
+                    <a class="nav-link {{ request()->routeIs('frontend.service') ? 'active' : '' }}"
+                        href="{{ route('frontend.service') }}">
+                        Services
+                    </a>
                 </li>
+
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('frontend.portfolio') }}">Portfolio</a>
+                    <a class="nav-link {{ request()->routeIs('frontend.portfolio') ? 'active' : '' }}"
+                        href="{{ route('frontend.portfolio') }}">
+                        Portfolio
+                    </a>
                 </li>
+
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('frontend.blog') }}">Blog</a>
+                    <a class="nav-link {{ request()->routeIs('frontend.blog') ? 'active' : '' }}"
+                        href="{{ route('frontend.blog') }}">
+                        Blog
+                    </a>
                 </li>
+
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('frontend.contact') }}">Contact</a>
+                    <a class="nav-link {{ request()->routeIs('frontend.contact') ? 'active' : '' }}"
+                        href="{{ route('frontend.contact') }}">
+                        Contact
+                    </a>
                 </li>
                 <!-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
