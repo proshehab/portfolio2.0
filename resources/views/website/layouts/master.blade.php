@@ -27,51 +27,7 @@
         <div id="preloader_inner"></div>
     </div>
 
-    <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container">
-            <a class="navbar-brand logo" href="index.html">
-                My<span>Website</span>
-                {{--
-                <!-- <img src="{{ asset('website') }}/images/logo.png" alt=""> --> --}}
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="service.html">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="portfolio.html">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="blog.html">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                    <!-- <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown link
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                    </li> -->
-                </ul>
-            </div>
-        </div>
-    </nav>
+    @include('website.layouts.header')
 
 
     <div class="home-banner">
@@ -671,32 +627,7 @@
         </div>
     </div>
 
-    <div class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="logo d-flex justify-content-center">
-                        <img src="{{ asset('website') }}/images/footer-logo.png" alt="">
-                    </div>
-                    <div class="description">
-                        Cum an oratio fierent detraxit, per in novum aliquando. Vel ei aeque appellantur. Ne deserunt
-                        adipisci sed, sed ex veniam accusam, usu ut nonumy admodum recteque.
-                    </div>
-                    <div class="social">
-                        <ul>
-                            <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href=""><i class="fab fa-twitter"></i></a></li>
-                            <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
-                            <li><a href=""><i class="fab fa-instagram"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="copyright">
-                        Copright 2022, company name. All Rights Reserved.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    @include('website.layouts.footer')
 
     <a href="" class="scrollup">
         <i class="fas fa-chevron-up"></i>
