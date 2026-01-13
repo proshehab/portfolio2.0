@@ -9,3 +9,4 @@ Route::get('/', function () {
 
 Route::get('/', [FrontendController::class, 'index'])->name('frontend.master');
 Route::get('/about', [FrontendController::class, 'about'])->name('frontend.about');
+Route::get('/service', [FrontendController::class, 'service'])->name('frontend.service');

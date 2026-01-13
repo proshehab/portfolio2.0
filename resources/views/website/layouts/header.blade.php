@@ -18,7 +18,7 @@
                     <a class="nav-link" href="{{ route('frontend.about') }}">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="service.html">Services</a>
+                    <a class="nav-link" href="{{ route('frontend.service') }}">Services</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="portfolio.html">Portfolio</a>
