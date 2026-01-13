@@ -8,14 +8,14 @@
 
     <title>Personal Portfolio Website</title>
 
-    <link rel="stylesheet" href="{{ asset('wesite') }}/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/all.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="{{ asset('website') }}/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('website') }}/css/all.css">
+    <link rel="stylesheet" href="{{ asset('website') }}/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="{{ asset('website') }}/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="{{ asset('website') }}/css/animate.css">
+    <link rel="stylesheet" href="{{ asset('website') }}/css/custom.css">
 
-    <link rel="icon" type="image/png" href="images/man.png">
+    <link rel="icon" type="image/png" href="{{ asset('website') }}/images/man.png">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
@@ -702,15 +702,15 @@
     </a>
 
 
-    <script src="js/jquery-3.6.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/counterup.min.js"></script>
-    <script src="js/filter.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="{{ asset('website') }}/js/jquery-3.6.1.min.js"></script>
+    <script src="{{ asset('website') }}/js/popper.min.js"></script>
+    <script src="{{ asset('website') }}/js/bootstrap.min.js"></script>
+    <script src="{{ asset('website') }}/js/jquery.waypoints.min.js"></script>
+    <script src="{{ asset('website') }}/js/counterup.min.js"></script>
+    <script src="{{ asset('website') }}/js/filter.min.js"></script>
+    <script src="{{ asset('website') }}/js/owl.carousel.min.js"></script>
+    <script src="{{ asset('website') }}/js/wow.min.js"></script>
+    <script src="{{ asset('website') }}/js/custom.js"></script>
 
 </body>
 
