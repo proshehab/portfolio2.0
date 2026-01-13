@@ -1,4 +1,5 @@
 @extends('website.layouts.master')
+@section('content')
 <div class="page-banner">
     <div class="container">
         <div class="row">
@@ -15,7 +16,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="about-photo d-flex justify-content-center">
-                    <img src="images/t3.jpg" alt="">
+                    <img src="{{ asset('website') }}/images/t3.jpg" alt="">
                 </div>
                 <div class="about-content">
                     <h2>About Me</h2>
@@ -47,3 +48,4 @@
         </div>
     </div>
 </div>
+@endsection
