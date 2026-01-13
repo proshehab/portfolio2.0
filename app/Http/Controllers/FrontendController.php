@@ -29,4 +29,9 @@ class FrontendController extends Controller
     {
         return view('website.blog');
     }
+
+    public function contact()
+    {
+        return view('website.contact');
+    }
 }

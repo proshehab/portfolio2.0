@@ -12,3 +12,4 @@ Route::get('/about', [FrontendController::class, 'about'])->name('frontend.about
 Route::get('/service', [FrontendController::class, 'service'])->name('frontend.service');
 Route::get('/portfolio', [FrontendController::class, 'portfolio'])->name('frontend.portfolio');
 Route::get('/blog', [FrontendController::class, 'blog'])->name('frontend.blog');
+Route::get('/contact', [FrontendController::class, 'contact'])->name('frontend.contact');
