@@ -31,7 +31,8 @@
         <div class="container">
             <a class="navbar-brand logo" href="index.html">
                 My<span>Website</span>
-                <!-- <img src="images/logo.png" alt=""> -->
+                {{--
+                <!-- <img src="{{ asset('website') }}/images/logo.png" alt=""> --> --}}
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -92,7 +93,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="right">
-                        <img src="images/man.png" alt="">
+                        <img src="{{ asset('website') }}/images/man.png" alt="">
                     </div>
                 </div>
             </div>
@@ -104,7 +105,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="left wow fadeInLeft">
-                        <img src="images/man2.jpg" alt="">
+                        <img src="{{ asset('website') }}/images/man2.jpg" alt="">
                     </div>
                 </div>
                 <div class="col-md-8">
@@ -411,8 +412,8 @@
                     <div class="filter-items">
                         <div class="filter-item web_design">
                             <div class="inner">
-                                <div class="photo"><a href="portfolio-detail.html"><img src="images/design_1.jpg"
-                                            alt=""></a></div>
+                                <div class="photo"><a href="portfolio-detail.html"><img
+                                            src="{{ asset('website') }}/images/design_1.jpg" alt=""></a></div>
                                 <div class="text">
                                     <h2>Design Project 1</h2>
                                 </div>
@@ -420,8 +421,8 @@
                         </div>
                         <div class="filter-item web_development">
                             <div class="inner">
-                                <div class="photo"><a href="portfolio-detail.html"><img src="images/development_1.jpg"
-                                            alt=""></a></div>
+                                <div class="photo"><a href="portfolio-detail.html"><img
+                                            src="{{ asset('website') }}/images/development_1.jpg" alt=""></a></div>
                                 <div class="text">
                                     <h2>Development Project 1</h2>
                                 </div>
@@ -429,8 +430,8 @@
                         </div>
                         <div class="filter-item web_design">
                             <div class="inner">
-                                <div class="photo"><a href="portfolio-detail.html"><img src="images/design_2.jpg"
-                                            alt=""></a></div>
+                                <div class="photo"><a href="portfolio-detail.html"><img
+                                            src="{{ asset('website') }}/images/design_2.jpg" alt=""></a></div>
                                 <div class="text">
                                     <h2>Design Project 2</h2>
                                 </div>
@@ -438,8 +439,8 @@
                         </div>
                         <div class="filter-item digital_marketing">
                             <div class="inner">
-                                <div class="photo"><a href="portfolio-detail.html"><img src="images/marketing_1.jpg"
-                                            alt=""></a></div>
+                                <div class="photo"><a href="portfolio-detail.html"><img
+                                            src="{{ asset('website') }}/images/marketing_1.jpg" alt=""></a></div>
                                 <div class="text">
                                     <h2>Marketing Project 1</h2>
                                 </div>
@@ -447,8 +448,8 @@
                         </div>
                         <div class="filter-item digital_marketing">
                             <div class="inner">
-                                <div class="photo"><a href="portfolio-detail.html"><img src="images/marketing_2.jpg"
-                                            alt=""></a></div>
+                                <div class="photo"><a href="portfolio-detail.html"><img
+                                            src="{{ asset('website') }}/images/marketing_2.jpg" alt=""></a></div>
                                 <div class="text">
                                     <h2>Marketing Project 2</h2>
                                 </div>
@@ -456,8 +457,8 @@
                         </div>
                         <div class="filter-item web_development">
                             <div class="inner">
-                                <div class="photo"><a href="portfolio-detail.html"><img src="images/development_2.jpg"
-                                            alt=""></a></div>
+                                <div class="photo"><a href="portfolio-detail.html"><img
+                                            src="{{ asset('website') }}/images/development_2.jpg" alt=""></a></div>
                                 <div class="text">
                                     <h2>Development Project 2</h2>
                                 </div>
@@ -465,8 +466,8 @@
                         </div>
                         <div class="filter-item web_design">
                             <div class="inner">
-                                <div class="photo"><a href="portfolio-detail.html"><img src="images/design_3.jpg"
-                                            alt=""></a></div>
+                                <div class="photo"><a href="portfolio-detail.html"><img
+                                            src="{{ asset('website') }}/images/design_3.jpg" alt=""></a></div>
                                 <div class="text">
                                     <h2>Design Project 3</h2>
                                 </div>
@@ -474,8 +475,8 @@
                         </div>
                         <div class="filter-item web_development">
                             <div class="inner">
-                                <div class="photo"><a href="portfolio-detail.html"><img src="images/development_3.jpg"
-                                            alt=""></a></div>
+                                <div class="photo"><a href="portfolio-detail.html"><img
+                                            src="{{ asset('website') }}/images/development_3.jpg" alt=""></a></div>
                                 <div class="text">
                                     <h2>Development Project 3</h2>
                                 </div>
@@ -483,8 +484,8 @@
                         </div>
                         <div class="filter-item digital_marketing">
                             <div class="inner">
-                                <div class="photo"><a href="portfolio-detail.html"><img src="images/marketing_3.jpg"
-                                            alt=""></a></div>
+                                <div class="photo"><a href="portfolio-detail.html"><img
+                                            src="{{ asset('website') }}/images/marketing_3.jpg" alt=""></a></div>
                                 <div class="text">
                                     <h2>Marketing Project 3</h2>
                                 </div>
@@ -508,7 +509,7 @@
                     <div class="owl-carousel owl-theme testimonial-carousel">
                         <div class="item">
                             <div class="photo d-flex justify-content-center">
-                                <img src="images/t1.jpg" alt="">
+                                <img src="{{ asset('website') }}/images/t1.jpg" alt="">
                             </div>
                             <div class="comment">
                                 Ad sea commodo tincidunt. Perfecto pericula ut eum, ei usu fugit utroque qualisque. Ius
@@ -522,7 +523,7 @@
                         </div>
                         <div class="item">
                             <div class="photo d-flex justify-content-center">
-                                <img src="images/t2.jpg" alt="">
+                                <img src="{{ asset('website') }}/images/t2.jpg" alt="">
                             </div>
                             <div class="comment">
                                 Minim scriptorem eos te, debet habemus laboramus usu te. Ei mel alia graeco melius, ius
@@ -536,7 +537,7 @@
                         </div>
                         <div class="item">
                             <div class="photo d-flex justify-content-center">
-                                <img src="images/t3.jpg" alt="">
+                                <img src="{{ asset('website') }}/images/t3.jpg" alt="">
                             </div>
                             <div class="comment">
                                 Vis summo suscipit splendide ne, ad augue consul impetus vel. Et qui inani utroque
@@ -564,7 +565,7 @@
                 <div class="col-md-4 wow fadeInUp">
                     <div class="item">
                         <div class="photo">
-                            <img src="images/post-1.jpg" alt="">
+                            <img src="{{ asset('website') }}/images/post-1.jpg" alt="">
                         </div>
                         <div class="text">
                             <h3>Blog Post Title</h3>
@@ -582,7 +583,7 @@
                 <div class="col-md-4 wow fadeInUp">
                     <div class="item">
                         <div class="photo">
-                            <img src="images/post-2.jpg" alt="">
+                            <img src="{{ asset('website') }}/images/post-2.jpg" alt="">
                         </div>
                         <div class="text">
                             <h3>Blog Post Title</h3>
@@ -600,7 +601,7 @@
                 <div class="col-md-4 wow fadeInUp">
                     <div class="item">
                         <div class="photo">
-                            <img src="images/post-3.jpg" alt="">
+                            <img src="{{ asset('website') }}/images/post-3.jpg" alt="">
                         </div>
                         <div class="text">
                             <h3>Blog Post Title</h3>
@@ -629,40 +630,40 @@
                 <div class="col-md-12">
                     <div class="owl-carousel owl-theme client-carousel">
                         <div class="item">
-                            <img src="images/client.png" alt="">
+                            <img src="{{ asset('website') }}/images/client.png" alt="">
                         </div>
                         <div class="item">
-                            <img src="images/client.png" alt="">
+                            <img src="{{ asset('website') }}/images/client.png" alt="">
                         </div>
                         <div class="item">
-                            <img src="images/client.png" alt="">
+                            <img src="{{ asset('website') }}/images/client.png" alt="">
                         </div>
                         <div class="item">
-                            <img src="images/client.png" alt="">
+                            <img src="{{ asset('website') }}/images/client.png" alt="">
                         </div>
                         <div class="item">
-                            <img src="images/client.png" alt="">
+                            <img src="{{ asset('website') }}/images/client.png" alt="">
                         </div>
                         <div class="item">
-                            <img src="images/client.png" alt="">
+                            <img src="{{ asset('website') }}/images/client.png" alt="">
                         </div>
                         <div class="item">
-                            <img src="images/client.png" alt="">
+                            <img src="{{ asset('website') }}/images/client.png" alt="">
                         </div>
                         <div class="item">
-                            <img src="images/client.png" alt="">
+                            <img src="{{ asset('website') }}/images/client.png" alt="">
                         </div>
                         <div class="item">
-                            <img src="images/client.png" alt="">
+                            <img src="{{ asset('website') }}/images/client.png" alt="">
                         </div>
                         <div class="item">
-                            <img src="images/client.png" alt="">
+                            <img src="{{ asset('website') }}/images/client.png" alt="">
                         </div>
                         <div class="item">
-                            <img src="images/client.png" alt="">
+                            <img src="{{ asset('website') }}/images/client.png" alt="">
                         </div>
                         <div class="item">
-                            <img src="images/client.png" alt="">
+                            <img src="{{ asset('website') }}/images/client.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -675,7 +676,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="logo d-flex justify-content-center">
-                        <img src="images/footer-logo.png" alt="">
+                        <img src="{{ asset('website') }}/images/footer-logo.png" alt="">
                     </div>
                     <div class="description">
                         Cum an oratio fierent detraxit, per in novum aliquando. Vel ei aeque appellantur. Ne deserunt
