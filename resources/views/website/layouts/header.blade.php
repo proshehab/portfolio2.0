@@ -12,10 +12,10 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" href="index.html">Home</a>
+                    <a class="nav-link active" href="{{ route('frontend.master') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about.html">About</a>
+                    <a class="nav-link" href="{{ route('frontend.about') }}">About</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="service.html">Services</a>

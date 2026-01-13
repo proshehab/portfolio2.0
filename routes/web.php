@@ -8,3 +8,4 @@ Route::get('/', function () {
 });
 
 Route::get('/', [FrontendController::class, 'index'])->name('frontend.master');
+Route::get('/about', [FrontendController::class, 'about'])->name('frontend.about');
