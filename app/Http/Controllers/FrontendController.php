@@ -20,4 +20,9 @@ class FrontendController extends Controller
     {
         return view('website.service');
     }
+
+    public function portfolio()
+    {
+        return view('website.portfolio');
+    }
 }
