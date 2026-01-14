@@ -15,3 +15,4 @@ Route::get('/contact', [FrontendController::class, 'contact'])->name('frontend.c
 Route::post('/contact/message', [FrontendController::class, 'contactMessage'])->name('frontend.contact.message');
 
 Route::get('admin/login', [AuthController::class, 'loginPage'])->name('admin.login.page');
+Route::post('admin/login/submit', [AuthController::class, 'loginSubmit'])->name('admin.login.submit');
