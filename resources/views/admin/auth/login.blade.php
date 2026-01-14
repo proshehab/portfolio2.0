@@ -36,18 +36,20 @@
                                             class="mx-auto" height="28" />
                                     </a>
                                 </div>
-
+                                <form action="{{ route('admin.login.submit') }}" method="POST">
+                                    @csrf
+                              
                                 <div class="pt-0">
                                     <form action="index.html" class="my-4">
                                         <div class="form-group mb-3">
                                             <label for="emailaddress" class="form-label">Email address</label>
-                                            <input class="form-control" type="email" id="emailaddress" required=""
+                                            <input class="form-control" type="email" id="emailaddress" 
                                                 placeholder="Enter your email">
                                         </div>
 
                                         <div class="form-group mb-3">
                                             <label for="password" class="form-label">Password</label>
-                                            <input class="form-control" type="password" required="" id="password"
+                                            <input class="form-control" type="password" id="password"
                                                 placeholder="Enter your password">
                                         </div>
 
@@ -75,6 +77,7 @@
                                         </div>
                                     </form>
                                 </div>
+                                </form>
                             </div>
                         </div>
                     </div>
