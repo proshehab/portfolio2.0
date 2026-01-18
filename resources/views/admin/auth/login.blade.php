@@ -43,13 +43,17 @@
                                     <form action="index.html" class="my-4">
                                         <div class="form-group mb-3">
                                             <label for="emailaddress" class="form-label">Email address</label>
-                                            <input class="form-control" type="email" id="emailaddress" 
+                                            <input class="form-control" name="email" type="email" id="emailaddress"
                                                 placeholder="Enter your email">
                                         </div>
+                                        @error('email')
+                                            <span class="text-danger">{{ $message }}</span>
+                                            
+                                        @enderror
 
                                         <div class="form-group mb-3">
                                             <label for="password" class="form-label">Password</label>
-                                            <input class="form-control" type="password" id="password"
+                                            <input class="form-control" name="password" type="password" id="password"
                                                 placeholder="Enter your password">
                                         </div>
 
@@ -77,7 +81,7 @@
                                         </div>
                                     </form>
                                 </div>
-                                </form>
+                                
                             </div>
                         </div>
                     </div>
