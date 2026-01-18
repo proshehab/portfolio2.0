@@ -55,6 +55,10 @@
                                             <label for="password" class="form-label">Password</label>
                                             <input class="form-control" name="password" type="password" id="password"
                                                 placeholder="Enter your password">
+                                        @error('password')
+                                            <span class="text-danger">{{ $message }}</span>
+                                            
+                                        @enderror
                                         </div>
 
                                         <div class="form-group d-flex mb-3">
