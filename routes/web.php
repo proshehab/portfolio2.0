@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AuthController;
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\FrontendController;
 use Illuminate\Support\Facades\Route;
 
@@ -16,3 +17,10 @@ Route::post('/contact/message', [FrontendController::class, 'contactMessage'])->
 
 Route::get('admin/login', [AuthController::class, 'loginPage'])->name('admin.login.page');
 Route::post('admin/login/submit', [AuthController::class, 'loginSubmit'])->name('admin.login.submit');
+
+
+
+Route::prefix('admin')->middleware('auth')->controller(DashboardController::class)->group(function () {
+
+    Route::get('/dashboard', 'index')->name('dashboard.index');
+});
