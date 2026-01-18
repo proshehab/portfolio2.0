@@ -26,6 +26,14 @@ class AuthController extends Controller
             return redirect()->intended('admin/dashboard');
         }
 
+        // if (Auth::attempt($credentials)) {
+        //     $request->session()->regenerate();
+
+        //     return redirect()->intended('admin/dashboard')->with($notification);
+
+            
+        // }
+
         // Authentication failed...
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
