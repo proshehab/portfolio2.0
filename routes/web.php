@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\FrontendController;
@@ -24,4 +25,6 @@ Route::prefix('admin')->middleware('auth')->controller(DashboardController::clas
 
     Route::get('/dashboard', 'index')->name('dashboard.index');
     Route::get('/logout', [AuthController::class, 'logout'])->name('admin.logout');
+
+    Route::get('/homeBanner', [AdminHomeController::class, 'homeBanner'])->name('admin.home.banner');
 });

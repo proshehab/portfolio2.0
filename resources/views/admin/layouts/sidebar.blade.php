@@ -29,7 +29,7 @@
                 <li class="menu-title">Menu</li>
 
                 <li>
-                    <a href="#sidebarDashboards" data-bs-toggle="collapse">
+                    <a href="{{ route('dashboard.index') }}">
                         <i data-feather="home"></i>
                         <span> Dashboard </span>
                         <span class="menu-arrow"></span>
@@ -42,9 +42,35 @@
                 <li>
                     <a href="#sidebarAuth" data-bs-toggle="collapse">
                         <i data-feather="users"></i>
-                        <span> Authentication </span>
+                        <span> Home </span>
                         <span class="menu-arrow"></span>
                     </a>
+
+                    <div class="collapse" id="sidebarAuth">
+                        <ul class="nav-second-level">
+                            <li>
+                                <a href="{{ route('admin.home.banner') }}" class="tp-link">Banner Section</a>
+                            </li>
+                            <li>
+                                <a href="auth-register.html" class="tp-link">Register</a>
+                            </li>
+                            <li>
+                                <a href="auth-recoverpw.html" class="tp-link">Recover Password</a>
+                            </li>
+                            <li>
+                                <a href="auth-lock-screen.html" class="tp-link">Lock Screen</a>
+                            </li>
+                            <li>
+                                <a href="auth-confirm-mail.html" class="tp-link">Confirm Mail</a>
+                            </li>
+                            <li>
+                                <a href="email-verification.html" class="tp-link">Email Verification</a>
+                            </li>
+                            <li>
+                                <a href="auth-logout.html" class="tp-link">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
 
                 </li>
 
