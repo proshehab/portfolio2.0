@@ -34,24 +34,8 @@
                         <span> Dashboard </span>
                         <span class="menu-arrow"></span>
                     </a>
-                    <div class="collapse" id="sidebarDashboards">
-                        <ul class="nav-second-level">
-                            <li>
-                                <a href="index.html" class="tp-link">Analytical</a>
-                            </li>
-                            <li>
-                                <a href="ecommerce.html" class="tp-link">E-commerce</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
 
-                <!-- <li>
-                                <a href="landing.html" target="_blank">
-                                    <i data-feather="globe"></i>
-                                    <span> Landing </span>
-                                </a>
-                            </li> -->
+                </li>
 
                 <li class="menu-title">Pages</li>
 
@@ -63,8 +47,6 @@
                     </a>
 
                 </li>
-
-
 
             </ul>
 
