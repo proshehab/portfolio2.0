@@ -23,4 +23,5 @@ Route::post('admin/login/submit', [AuthController::class, 'loginSubmit'])->name(
 Route::prefix('admin')->middleware('auth')->controller(DashboardController::class)->group(function () {
 
     Route::get('/dashboard', 'index')->name('dashboard.index');
+    Route::get('/logout', [AuthController::class, 'logout'])->name('admin.logout');
 });

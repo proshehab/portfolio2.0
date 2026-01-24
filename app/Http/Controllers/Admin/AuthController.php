@@ -31,12 +31,22 @@ class AuthController extends Controller
 
         //     return redirect()->intended('admin/dashboard')->with($notification);
 
-            
+
         // }
 
         // Authentication failed...
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
         ])->withInput();
+    }
+
+    public function logout(Request $request)
+    {
+        auth()->logout();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect('/admin/login');
     }
 }
