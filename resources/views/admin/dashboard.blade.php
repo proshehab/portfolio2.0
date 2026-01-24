@@ -11,13 +11,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <!-- App favicon -->
-    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <link rel="shortcut icon" href="{{ asset('admin') }}/images/favicon.ico">
 
     <!-- App css -->
-    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" id="app-style" />
+    <link href="{{ asset('admin') }}/css/app.min.css" rel="stylesheet" type="text/css" id="app-style" />
 
     <!-- Icons -->
-    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('admin') }}/css/icons.min.css" rel="stylesheet" type="text/css" />
 
 </head>
 
@@ -82,8 +82,8 @@
                                     <a href="javascript:void(0);"
                                         class="dropdown-item notify-item text-muted link-primary active">
                                         <div class="notify-icon">
-                                            <img src="assets/images/users/user-12.jpg" class="img-fluid rounded-circle"
-                                                alt="" />
+                                            <img src="{{ asset('admin') }}/images/users/user-12.jpg"
+                                                class="img-fluid rounded-circle" alt="" />
                                         </div>
                                         <div class="d-flex align-items-center justify-content-between">
                                             <p class="notify-details">Carl Steadham</p>
@@ -99,8 +99,8 @@
                                     <a href="javascript:void(0);"
                                         class="dropdown-item notify-item text-muted link-primary">
                                         <div class="notify-icon">
-                                            <img src="assets/images/users/user-2.jpg" class="img-fluid rounded-circle"
-                                                alt="" />
+                                            <img src="{{ asset('admin') }}/images/users/user-2.jpg"
+                                                class="img-fluid rounded-circle" alt="" />
                                         </div>
                                         <div class="notify-content">
                                             <div class="d-flex align-items-center justify-content-between">
@@ -126,8 +126,8 @@
                                     <a href="javascript:void(0);"
                                         class="dropdown-item notify-item text-muted link-primary">
                                         <div class="notify-icon">
-                                            <img src="assets/images/users/user-3.jpg" class="img-fluid rounded-circle"
-                                                alt="" />
+                                            <img src="{{ asset('admin') }}/images/users/user-3.jpg"
+                                                class="img-fluid rounded-circle" alt="" />
                                         </div>
                                         <div class="notify-content">
                                             <div class="d-flex align-items-center justify-content-between">
@@ -144,8 +144,8 @@
                                     <a href="javascript:void(0);"
                                         class="dropdown-item notify-item text-muted link-primary">
                                         <div class="notify-icon">
-                                            <img src="assets/images/users/user-8.jpg" class="img-fluid rounded-circle"
-                                                alt="" />
+                                            <img src="{{ asset('admin') }}/images/users/user-8.jpg"
+                                                class="img-fluid rounded-circle" alt="" />
                                         </div>
                                         <div class="d-flex align-items-center justify-content-between">
                                             <p class="notify-details">Violette Lasky</p>
@@ -161,8 +161,8 @@
                                     <a href="javascript:void(0);"
                                         class="dropdown-item notify-item text-muted link-primary">
                                         <div class="notify-icon">
-                                            <img src="assets/images/users/user-5.jpg" class="img-fluid rounded-circle"
-                                                alt="" />
+                                            <img src="{{ asset('admin') }}/images/users/user-5.jpg"
+                                                class="img-fluid rounded-circle" alt="" />
                                         </div>
                                         <div class="d-flex align-items-center justify-content-between">
                                             <p class="notify-details">Ralph Edwards</p>
@@ -178,8 +178,8 @@
                                     <a href="javascript:void(0);"
                                         class="dropdown-item notify-item text-muted link-primary">
                                         <div class="notify-icon">
-                                            <img src="assets/images/users/user-6.jpg" class="img-fluid rounded-circle"
-                                                alt="" />
+                                            <img src="{{ asset('admin') }}/images/users/user-6.jpg"
+                                                class="img-fluid rounded-circle" alt="" />
                                         </div>
                                         <div class="notify-content">
                                             <div class="d-flex align-items-center justify-content-between">
@@ -206,7 +206,8 @@
                         <li class="dropdown notification-list topbar-dropdown">
                             <a class="nav-link dropdown-toggle nav-user me-0" data-bs-toggle="dropdown" href="#"
                                 role="button" aria-haspopup="false" aria-expanded="false">
-                                <img src="assets/images/users/user-11.jpg" alt="user-image" class="rounded-circle">
+                                <img src="{{ asset('admin') }}/images/users/user-11.jpg" alt="user-image"
+                                    class="rounded-circle">
                                 <span class="pro-user-name ms-1">
                                     Christian <i class="mdi mdi-chevron-down"></i>
                                 </span>
@@ -258,18 +259,18 @@
                     <div class="logo-box">
                         <a href="index.html" class="logo logo-light">
                             <span class="logo-sm">
-                                <img src="assets/images/logo-sm.png" alt="" height="22">
+                                <img src="{{ asset('admin') }}/images/logo-sm.png" alt="" height="22">
                             </span>
                             <span class="logo-lg">
-                                <img src="assets/images/logo-light.png" alt="" height="24">
+                                <img src="{{ asset('admin') }}/images/logo-light.png" alt="" height="24">
                             </span>
                         </a>
                         <a href="index.html" class="logo logo-dark">
                             <span class="logo-sm">
-                                <img src="assets/images/logo-sm.png" alt="" height="22">
+                                <img src="{{ asset('admin') }}/images/logo-sm.png" alt="" height="22">
                             </span>
                             <span class="logo-lg">
-                                <img src="assets/images/logo-dark.png" alt="" height="24">
+                                <img src="{{ asset('admin') }}/images/logo-dark.png" alt="" height="24">
                             </span>
                         </a>
                     </div>
@@ -1114,25 +1115,25 @@
     <!-- END wrapper -->
 
     <!-- Vendor -->
-    <script src="assets/libs/jquery/jquery.min.js"></script>
-    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/libs/simplebar/simplebar.min.js"></script>
-    <script src="assets/libs/node-waves/waves.min.js"></script>
-    <script src="assets/libs/waypoints/lib/jquery.waypoints.min.js"></script>
-    <script src="assets/libs/jquery.counterup/jquery.counterup.min.js"></script>
-    <script src="assets/libs/feather-icons/feather.min.js"></script>
+    <script src="{{ asset('admin') }}/libs/jquery/jquery.min.js"></script>
+    <script src="{{ asset('admin') }}/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('admin') }}/libs/simplebar/simplebar.min.js"></script>
+    <script src="{{ asset('admin') }}/libs/node-waves/waves.min.js"></script>
+    <script src="{{ asset('admin') }}/libs/waypoints/lib/jquery.waypoints.min.js"></script>
+    <script src="{{ asset('admin') }}/libs/jquery.counterup/jquery.counterup.min.js"></script>
+    <script src="{{ asset('admin') }}/libs/feather-icons/feather.min.js"></script>
 
     <!-- Apexcharts JS -->
-    <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+    <script src="{{ asset('admin') }}/libs/apexcharts/apexcharts.min.js"></script>
 
     <!-- for basic area chart -->
-    <script src="https://apexcharts.com/samples/assets/stock-prices.js"></script>
+    <script src="https://apexcharts.com/samples/{{ asset('admin') }}/stock-prices.js"></script>
 
     <!-- Widgets Init Js -->
-    <script src="assets/js/pages/analytics-dashboard.init.js"></script>
+    <script src="{{ asset('admin') }}/js/pages/analytics-dashboard.init.js"></script>
 
     <!-- App js-->
-    <script src="assets/js/app.js"></script>
+    <script src="{{ asset('admin') }}/js/app.js"></script>
 
 </body>
 
