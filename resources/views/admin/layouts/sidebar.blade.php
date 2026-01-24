@@ -48,6 +48,17 @@
 
                 </li>
 
+                <li>
+                    <a href="{{ route('frontend.master') }}" target="_blank">
+                        <i data-feather="aperture"></i>
+                        <span> Website </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+
+                </li>
+
+
+
             </ul>
 
         </div>
