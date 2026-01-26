@@ -27,4 +27,5 @@ Route::prefix('admin')->middleware('auth')->controller(DashboardController::clas
     Route::get('/logout', [AuthController::class, 'logout'])->name('admin.logout');
 
     Route::get('/homeBanner', [AdminHomeController::class, 'homeBanner'])->name('admin.home.banner');
+    Route::get('/homeAbout', [AdminHomeController::class, 'homeAbout'])->name('admin.home.about');
 });

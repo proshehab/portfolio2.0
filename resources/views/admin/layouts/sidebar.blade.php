@@ -52,7 +52,7 @@
                                 <a href="{{ route('admin.home.banner') }}" class="tp-link">Banner Section</a>
                             </li>
                             <li>
-                                <a href="auth-register.html" class="tp-link">About</a>
+                                <a href="{{ route('admin.home.about') }}" class="tp-link">About</a>
                             </li>
                             <li>
                                 <a href="auth-recoverpw.html" class="tp-link">My Expertise Area</a>
@@ -69,7 +69,7 @@
                             <li>
                                 <a href="auth-logout.html" class="tp-link">Testimonials</a>
                             </li>
-                            
+
                               <li>
                                 <a href="auth-logout.html" class="tp-link">Blog</a>
                             </li>
