@@ -52,22 +52,30 @@
                                 <a href="{{ route('admin.home.banner') }}" class="tp-link">Banner Section</a>
                             </li>
                             <li>
-                                <a href="auth-register.html" class="tp-link">Register</a>
+                                <a href="auth-register.html" class="tp-link">About</a>
                             </li>
                             <li>
-                                <a href="auth-recoverpw.html" class="tp-link">Recover Password</a>
+                                <a href="auth-recoverpw.html" class="tp-link">My Expertise Area</a>
                             </li>
                             <li>
-                                <a href="auth-lock-screen.html" class="tp-link">Lock Screen</a>
+                                <a href="auth-lock-screen.html" class="tp-link">Education and Experience</a>
                             </li>
                             <li>
-                                <a href="auth-confirm-mail.html" class="tp-link">Confirm Mail</a>
+                                <a href="auth-confirm-mail.html" class="tp-link">Services</a>
                             </li>
                             <li>
-                                <a href="email-verification.html" class="tp-link">Email Verification</a>
+                                <a href="email-verification.html" class="tp-link">My Portfolio</a>
                             </li>
                             <li>
-                                <a href="auth-logout.html" class="tp-link">Logout</a>
+                                <a href="auth-logout.html" class="tp-link">Testimonials</a>
+                            </li>
+                            
+                              <li>
+                                <a href="auth-logout.html" class="tp-link">Blog</a>
+                            </li>
+
+                              <li>
+                                <a href="auth-logout.html" class="tp-link">Clients</a>
                             </li>
                         </ul>
                     </div>
