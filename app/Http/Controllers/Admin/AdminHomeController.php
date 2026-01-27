@@ -16,4 +16,9 @@ class AdminHomeController extends Controller
     {
         return view('admin.about.index');
     }
+
+    public function homeSkill()
+    {
+        return view('admin.skill.index');
+    }
 }

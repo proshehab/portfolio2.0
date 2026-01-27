@@ -55,7 +55,7 @@
                                 <a href="{{ route('admin.home.about') }}" class="tp-link">About</a>
                             </li>
                             <li>
-                                <a href="auth-recoverpw.html" class="tp-link">My Expertise Area</a>
+                                <a href="{{ route('admin.home.skill') }}" class="tp-link">My Expertise Area</a>
                             </li>
                             <li>
                                 <a href="auth-lock-screen.html" class="tp-link">Education and Experience</a>
@@ -70,11 +70,11 @@
                                 <a href="auth-logout.html" class="tp-link">Testimonials</a>
                             </li>
 
-                              <li>
+                            <li>
                                 <a href="auth-logout.html" class="tp-link">Blog</a>
                             </li>
 
-                              <li>
+                            <li>
                                 <a href="auth-logout.html" class="tp-link">Clients</a>
                             </li>
                         </ul>
