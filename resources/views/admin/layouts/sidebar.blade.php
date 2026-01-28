@@ -67,7 +67,7 @@
                                 <a href="{{ route('admin.home.portfolio') }}" class="tp-link">Portfolio</a>
                             </li>
                             <li>
-                                <a href="auth-logout.html" class="tp-link">Testimonials</a>
+                                <a href="{{ route('admin.home.testimonial') }}" class="tp-link">Testimonials</a>
                             </li>
 
                             <li>

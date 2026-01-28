@@ -36,4 +36,9 @@ class AdminHomeController extends Controller
     {
         return view('admin.portfolio.index');
     }
+
+    public function homeTestimonial()
+    {
+        return view('admin.testimonial.index');
+    }
 }
