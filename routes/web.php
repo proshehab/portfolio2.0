@@ -34,4 +34,5 @@ Route::prefix('admin')->middleware('auth')->controller(DashboardController::clas
     Route::get('/homePortfolio', [AdminHomeController::class, 'homePortfolio'])->name('admin.home.portfolio');
     Route::get('/homeTestimonial', [AdminHomeController::class, 'homeTestimonial'])->name('admin.home.testimonial');
     Route::get('/homeBlog', [AdminHomeController::class, 'homeBlog'])->name('admin.home.blog');
+    Route::get('/homeClient', [AdminHomeController::class, 'homeClient'])->name('admin.home.client');
 });
