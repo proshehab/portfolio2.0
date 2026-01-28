@@ -26,4 +26,9 @@ class AdminHomeController extends Controller
     {
         return view('admin.qualification.index');
     }
+
+    public function homeService()
+    {
+        return view('admin.service.index');
+    }
 }

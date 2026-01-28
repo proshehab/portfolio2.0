@@ -62,7 +62,7 @@
                                     Experience</a>
                             </li>
                             <li>
-                                <a href="auth-confirm-mail.html" class="tp-link">Services</a>
+                                <a href="{{ route('admin.home.service') }}" class="tp-link">Services</a>
                             </li>
                             <li>
                                 <a href="email-verification.html" class="tp-link">My Portfolio</a>
