@@ -71,7 +71,7 @@
                             </li>
 
                             <li>
-                                <a href="auth-logout.html" class="tp-link">Blog</a>
+                                <a href="{{ route('admin.home.blog') }}" class="tp-link">Blog</a>
                             </li>
 
                             <li>
