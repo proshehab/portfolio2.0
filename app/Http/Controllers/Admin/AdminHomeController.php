@@ -21,4 +21,9 @@ class AdminHomeController extends Controller
     {
         return view('admin.skill.index');
     }
+
+    public function homeQualification()
+    {
+        return view('admin.qualification.index');
+    }
 }

@@ -58,7 +58,8 @@
                                 <a href="{{ route('admin.home.skill') }}" class="tp-link">My Expertise Area</a>
                             </li>
                             <li>
-                                <a href="auth-lock-screen.html" class="tp-link">Education and Experience</a>
+                                <a href="{{ route('admin.home.qualification') }}" class="tp-link">Education and
+                                    Experience</a>
                             </li>
                             <li>
                                 <a href="auth-confirm-mail.html" class="tp-link">Services</a>
