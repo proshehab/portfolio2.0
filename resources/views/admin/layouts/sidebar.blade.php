@@ -49,23 +49,22 @@
                     <div class="collapse" id="sidebarAuth">
                         <ul class="nav-second-level">
                             <li>
-                                <a href="{{ route('admin.home.banner') }}" class="tp-link">Banner Section</a>
+                                <a href="{{ route('admin.home.banner') }}" class="tp-link">Banner</a>
                             </li>
                             <li>
                                 <a href="{{ route('admin.home.about') }}" class="tp-link">About</a>
                             </li>
                             <li>
-                                <a href="{{ route('admin.home.skill') }}" class="tp-link">My Expertise Area</a>
+                                <a href="{{ route('admin.home.skill') }}" class="tp-link">Skill</a>
                             </li>
                             <li>
-                                <a href="{{ route('admin.home.qualification') }}" class="tp-link">Education and
-                                    Experience</a>
+                                <a href="{{ route('admin.home.qualification') }}" class="tp-link">Qualification</a>
                             </li>
                             <li>
                                 <a href="{{ route('admin.home.service') }}" class="tp-link">Services</a>
                             </li>
                             <li>
-                                <a href="email-verification.html" class="tp-link">My Portfolio</a>
+                                <a href="{{ route('admin.home.portfolio') }}" class="tp-link">Portfolio</a>
                             </li>
                             <li>
                                 <a href="auth-logout.html" class="tp-link">Testimonials</a>

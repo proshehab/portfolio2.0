@@ -31,4 +31,9 @@ class AdminHomeController extends Controller
     {
         return view('admin.service.index');
     }
+
+    public function homePortfolio()
+    {
+        return view('admin.portfolio.index');
+    }
 }
