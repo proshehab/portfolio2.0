@@ -32,25 +32,34 @@
                         <div class="col-lg-6">
                             <form>
                                 <div class="mb-3">
-                                    <label for="simpleinput" class="form-label">Text</label>
+                                    <label for="simpleinput" class="form-label">Title</label>
                                     <input type="text" id="simpleinput" class="form-control">
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="simpleinput" class="form-label">Text</label>
+                                    <label for="simpleinput" class="form-label">Name *</label>
                                     <input type="text" id="simpleinput" class="form-control">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="simpleinput" class="form-label">Text</label>
+                                    <label for="simpleinput" class="form-label">Designation</label>
                                     <input type="text" id="simpleinput" class="form-control">
                                 </div>
-
-
                                 <div class="mb-3">
-                                    <label for="example-textarea" class="form-label">Text area</label>
+                                    <label for="example-textarea" class="form-label">Description</label>
                                     <textarea class="form-control" id="example-textarea" rows="5"
                                         spellcheck="false"></textarea>
                                 </div>
+
+                                 <div class="mb-3">
+                                    <label for="simpleinput" class="form-label">Button Text</label>
+                                    <input type="text" id="simpleinput" class="form-control">
+                                </div>
+
+                                 <div class="mb-3">
+                                    <label for="simpleinput" class="form-label">Button URL</label>
+                                    <input type="text" id="simpleinput" class="form-control">
+                                </div>
+
 
 
                                 <div class="col-auto">
