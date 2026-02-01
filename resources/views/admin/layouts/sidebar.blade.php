@@ -82,6 +82,7 @@
 
                 </li>
 
+
                 <li>
                     <a href="{{ route('frontend.master') }}" target="_blank">
                         <i data-feather="aperture"></i>
@@ -91,7 +92,13 @@
 
                 </li>
 
-
+                <li>
+                    <a href="#sidebarAuth" data-bs-toggle="collapse">
+                        <i data-feather="users"></i>
+                        <span> About </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                </li>
 
             </ul>
 
