@@ -12,6 +12,22 @@ class AdminHomeController extends Controller
         return view('admin.home.index');
     }
 
+    public function homeBannerUpdate(Request $request)
+    {
+        // Validate the incoming request data
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'subtitle' => 'required|string|max:255',
+            'background_image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+
+        // Process the data (e.g., save to database, upload image, etc.)
+        // This is a placeholder for actual update logic
+        // HomeBanner::update([...]);
+
+        return redirect()->route('admin.home.banner')->with('success', 'Home banner updated successfully.');
+    }
+
     public function homeAbout()
     {
         return view('admin.about.index');
