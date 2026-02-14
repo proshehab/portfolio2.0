@@ -15,48 +15,49 @@ class AdminHomeController extends Controller
 
     public function homeBannerUpdate(Request $request)
     {
+
+        //dd($request->all());
         // Validate the incoming request data
         $request->validate([
-            'title' => 'required|string|max:255',
-            'name' => 'required|string|max:255',
-            'designation' => 'required|string|max:255',
-            'description' => 'required|string',
-            'button_text' => 'required|string|max:255',
-            'button_url' => 'required|url',
-            'subtitle' => 'required|string|max:255',
-            'background_image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'banner_title' => 'required|string|max:255',
+            'banner_name' => 'required|string|max:255',
+            'banner_designation' => 'required|string|max:255',
+            'banner_description' => 'required|string',
+            'banner_button_text' => 'required|string|max:255',
+            'banner_button_url' => 'required|url',
+            'banner_image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
         // Get the banner record (assuming single row with id = 1)
         $banner = HomePageItem::findOrFail(1);
 
         // Handle background image upload
-        if ($request->hasFile('background_image')) {
+        if ($request->hasFile('banner_image')) {
 
             // Delete old image if exists
-            if ($banner->background_image && file_exists(public_path($banner->background_image))) {
-                unlink(public_path($banner->background_image));
+            if ($banner->banner_image && file_exists(public_path($banner->banner_image))) {
+                unlink(public_path($banner->banner_image));
             }
 
-            $image = $request->file('background_image');
+            $image = $request->file('banner_image');
             $imageName = time() . '_' . $image->getClientOriginalName();
             $image->move(public_path('upload/home'), $imageName);
 
-            $banner->background_image = 'upload/home/' . $imageName;
+            $banner->banner_image = 'upload/home/' . $imageName;
         }
 
         // Update other fields
-        $banner->title = $request->title;
-        $banner->name = $request->name;
-        $banner->designation = $request->designation;
-        $banner->description = $request->description;
-        $banner->button_text = $request->button_text;
-        $banner->button_url = $request->button_url;
-        $banner->subtitle = $request->subtitle;
+        $banner->banner_title = $request->banner_title;
+        $banner->banner_name = $request->banner_name;
+        $banner->banner_designation = $request->banner_designation;
+        $banner->banner_description = $request->banner_description;
+        $banner->banner_button_text = $request->banner_button_text;
+        $banner->banner_button_url = $request->banner_button_url;
+
 
         $banner->save();
 
-        return redirect()->route('admin.home.banner')
+        return redirect()->route('admin.home.banner.update')
             ->with('success', 'Home banner updated successfully.');
     }
 

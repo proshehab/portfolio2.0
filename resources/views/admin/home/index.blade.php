@@ -36,8 +36,9 @@
                                 <div class="mb-3">
                                     <label for="simpleinput" class="form-label">Title *</label>
                                     <input type="text" id="simpleinput"
-                                        class="form-control @error('title')is-invalid @enderror" name="title">
-                                    @error('title')
+                                        class="form-control @error('banner_title')is-invalid @enderror"
+                                        name="banner_title">
+                                    @error('banner_title')
                                     <div class="text-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
@@ -45,25 +46,27 @@
                                 <div class="mb-3">
                                     <label for="simpleinput" class="form-label">Name *</label>
                                     <input type="text" id="simpleinput"
-                                        class="form-control @error('name')is-invalid @enderror" name="name">
-                                    @error('name')
+                                        class="form-control @error('banner_name')is-invalid @enderror"
+                                        name="banner_name">
+                                    @error('banner_name')
                                     <div class="text-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
                                 <div class="mb-3">
                                     <label for="simpleinput" class="form-label">Designation *</label>
                                     <input type="text" id="simpleinput"
-                                        class="form-control @error('designation')is-invalid @enderror"
-                                        name="designation">
-                                    @error('designation')
+                                        class="form-control @error('banner_designation')is-invalid @enderror"
+                                        name="banner_designation">
+                                    @error('banner_designation')
                                     <div class="text-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
                                 <div class="mb-3">
                                     <label for="example-textarea" class="form-label">Description *</label>
-                                    <textarea class="form-control @error('description')is-invalid @enderror"
-                                        id="example-textarea" rows="5" spellcheck="false" name="description"></textarea>
-                                    @error('description')
+                                    <textarea class="form-control @error('banner_description')is-invalid @enderror"
+                                        id="example-textarea" rows="5" spellcheck="false"
+                                        name="banner_description"></textarea>
+                                    @error('banner_description')
                                     <div class="text-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
@@ -71,9 +74,9 @@
                                 <div class="mb-3">
                                     <label for="simpleinput" class="form-label">Button Text *</label>
                                     <input type="text" id="simpleinput"
-                                        class="form-control @error('button_text')is-invalid @enderror"
-                                        name="button_text">
-                                    @error('button_text')
+                                        class="form-control @error('banner_button_text')is-invalid @enderror"
+                                        name="banner_button_text">
+                                    @error('banner_button_text')
                                     <div class="text-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
@@ -81,33 +84,28 @@
                                 <div class="mb-3">
                                     <label for="simpleinput" class="form-label">Button URL *</label>
                                     <input type="text" id="simpleinput"
-                                        class="form-control @error('button_url')is-invalid @enderror" name="button_url">
-                                    @error('button_url')
+                                        class="form-control @error('banner_button_url')is-invalid @enderror"
+                                        name="banner_button_url">
+                                    @error('banner_button_url')
                                     <div class="text-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
-
-
 
                                 <div class="col-auto">
                                     <button type="submit" class="btn btn-primary">Submit</button>
                                 </div>
 
-                            </form>
                         </div>
 
                         <div class="col-lg-6">
-                            <form>
 
-                                <div class="mb-3">
-                                    <label for="formFile" class="form-label">Image *</label>
-                                    <input class="form-control" type="file" id="formFile">
-                                </div>
-
-
-
-                            </form>
+                            <div class="mb-3">
+                                <label for="formFile" class="form-label">Image *</label>
+                                <input class="form-control" type="file" id="formFile" name="banner_image">
+                            </div>
                         </div>
+
+                        </form>
                     </div>
                 </div>
 
