@@ -25,10 +25,13 @@ class AdminHomeController extends Controller
             'subtitle' => 'required|string|max:255',
             'background_image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
-
-        // Process the data (e.g., save to database, upload image, etc.)
-        // This is a placeholder for actual update logic
-        // HomeBanner::update([...]);
+        // Handle the file upload if a new background image is provided
+        if ($request->hasFile('background_image')) {
+            $image = $request->file('background_image');
+            $imageName = time() . '_' . $image->getClientOriginalName();
+            $image->move(public_path('uploads/home'), $imageName);
+            // Update the background image path in the database or configuration
+        }
 
         return redirect()->route('admin.home.banner')->with('success', 'Home banner updated successfully.');
     }
