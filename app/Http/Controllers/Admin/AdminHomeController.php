@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\HomePageItem;
 use Illuminate\Http\Request;
 
 class AdminHomeController extends Controller
@@ -25,16 +26,40 @@ class AdminHomeController extends Controller
             'subtitle' => 'required|string|max:255',
             'background_image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
-        // Handle the file upload if a new background image is provided
+
+        // Get the banner record (assuming single row with id = 1)
+        $banner = HomePageItem::findOrFail(1);
+
+        // Handle background image upload
         if ($request->hasFile('background_image')) {
+
+            // Delete old image if exists
+            if ($banner->background_image && file_exists(public_path($banner->background_image))) {
+                unlink(public_path($banner->background_image));
+            }
+
             $image = $request->file('background_image');
             $imageName = time() . '_' . $image->getClientOriginalName();
-            $image->move(public_path('uploads/home'), $imageName);
-            // Update the background image path in the database or configuration
+            $image->move(public_path('upload/home'), $imageName);
+
+            $banner->background_image = 'upload/home/' . $imageName;
         }
 
-        return redirect()->route('admin.home.banner')->with('success', 'Home banner updated successfully.');
+        // Update other fields
+        $banner->title = $request->title;
+        $banner->name = $request->name;
+        $banner->designation = $request->designation;
+        $banner->description = $request->description;
+        $banner->button_text = $request->button_text;
+        $banner->button_url = $request->button_url;
+        $banner->subtitle = $request->subtitle;
+
+        $banner->save();
+
+        return redirect()->route('admin.home.banner')
+            ->with('success', 'Home banner updated successfully.');
     }
+
 
     public function homeAbout()
     {
