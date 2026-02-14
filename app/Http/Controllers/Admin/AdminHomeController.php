@@ -17,6 +17,11 @@ class AdminHomeController extends Controller
         // Validate the incoming request data
         $request->validate([
             'title' => 'required|string|max:255',
+            'name' => 'required|string|max:255',
+            'designation' => 'required|string|max:255',
+            'description' => 'required|string',
+            'button_text' => 'required|string|max:255',
+            'button_url' => 'required|url',
             'subtitle' => 'required|string|max:255',
             'background_image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);

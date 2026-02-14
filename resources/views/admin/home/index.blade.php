@@ -30,34 +30,61 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-lg-6">
-                            <form>
+                            <form method="post" action="{{ route('admin.home.banner.update') }}"
+                                enctype="multipart/form-data">
+                                @csrf
                                 <div class="mb-3">
                                     <label for="simpleinput" class="form-label">Title *</label>
-                                    <input type="text" id="simpleinput" class="form-control">
+                                    <input type="text" id="simpleinput"
+                                        class="form-control @error('title')is-invalid @enderror" name="title">
+                                    @error('title')
+                                    <div class="text-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
 
                                 <div class="mb-3">
                                     <label for="simpleinput" class="form-label">Name *</label>
-                                    <input type="text" id="simpleinput" class="form-control">
+                                    <input type="text" id="simpleinput"
+                                        class="form-control @error('name')is-invalid @enderror" name="name">
+                                    @error('name')
+                                    <div class="text-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
                                 <div class="mb-3">
                                     <label for="simpleinput" class="form-label">Designation *</label>
-                                    <input type="text" id="simpleinput" class="form-control">
+                                    <input type="text" id="simpleinput"
+                                        class="form-control @error('designation')is-invalid @enderror"
+                                        name="designation">
+                                    @error('designation')
+                                    <div class="text-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
                                 <div class="mb-3">
                                     <label for="example-textarea" class="form-label">Description *</label>
-                                    <textarea class="form-control" id="example-textarea" rows="5"
-                                        spellcheck="false"></textarea>
+                                    <textarea class="form-control @error('description')is-invalid @enderror"
+                                        id="example-textarea" rows="5" spellcheck="false" name="description"></textarea>
+                                    @error('description')
+                                    <div class="text-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
 
-                                 <div class="mb-3">
-                                    <label for="simpleinput" class="form-label">Button Text  *</label>
-                                    <input type="text" id="simpleinput" class="form-control">
+                                <div class="mb-3">
+                                    <label for="simpleinput" class="form-label">Button Text *</label>
+                                    <input type="text" id="simpleinput"
+                                        class="form-control @error('button_text')is-invalid @enderror"
+                                        name="button_text">
+                                    @error('button_text')
+                                    <div class="text-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
 
-                                 <div class="mb-3">
+                                <div class="mb-3">
                                     <label for="simpleinput" class="form-label">Button URL *</label>
-                                    <input type="text" id="simpleinput" class="form-control">
+                                    <input type="text" id="simpleinput"
+                                        class="form-control @error('button_url')is-invalid @enderror" name="button_url">
+                                    @error('button_url')
+                                    <div class="text-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
 
 
