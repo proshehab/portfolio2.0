@@ -29,6 +29,7 @@ Route::prefix('admin')->middleware('auth')->controller(DashboardController::clas
     Route::get('/homeBanner', [AdminHomeController::class, 'homeBanner'])->name('admin.home.banner');
     Route::post('/homeBanner/update', [AdminHomeController::class, 'homeBannerUpdate'])->name('admin.home.banner.update');
     Route::get('/homeAbout', [AdminHomeController::class, 'homeAbout'])->name('admin.home.about');
+    Route::post('/homeAbout/update', [AdminHomeController::class, 'homeAboutUpdate'])->name('admin.home.about.update');
     Route::get('/homeSkill', [AdminHomeController::class, 'homeSkill'])->name('admin.home.skill');
     Route::get('/homeQualification', [AdminHomeController::class, 'homeQualification'])->name('admin.home.qualification');
     Route::get('/homeService', [AdminHomeController::class, 'homeService'])->name('admin.home.service');

@@ -63,7 +63,67 @@ class AdminHomeController extends Controller
 
     public function homeAbout()
     {
-        return view('admin.about.index');
+        $about = HomePageItem::findOrFail(1);
+        return view('admin.about.index', compact('about'));
+    }
+
+    public function homeAboutUpdate(Request $request)
+    {
+        $about = HomePageItem::findOrFail(1);
+
+        $request->validate([
+            'about_subtitle' => 'required|string|max:255',
+            'about_title' => 'required|string|max:255',
+            'about_description' => 'required|string',
+            'about_person_name' => 'required|string|max:255',
+            'about_person_phone' => 'required|string|max:255',
+            'about_person_email' => 'required|email|max:255',
+            'about_icon1' => 'nullable|string|max:255',
+            'about_icon1_url' => 'nullable|url|max:255',
+            'about_icon2' => 'nullable|string|max:255',
+            'about_icon2_url' => 'nullable|url|max:255',
+            'about_icon3' => 'nullable|string|max:255',
+            'about_icon3_url' => 'nullable|url|max:255',
+            'about_icon4' => 'nullable|string|max:255',
+            'about_icon4_url' => 'nullable|url|max:255',
+            'about_icon5' => 'nullable|string|max:255',
+            'about_icon5_url' => 'nullable|url|max:255',
+            'about_photo' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+
+        if ($request->hasFile('about_photo')) {
+            if ($about->about_photo && file_exists(public_path($about->about_photo))) {
+                unlink(public_path($about->about_photo));
+            }
+
+            $image = $request->file('about_photo');
+            $imageName = time() . '_' . $image->getClientOriginalName();
+            $image->move(public_path('upload/home'), $imageName);
+
+            $about->about_photo = 'upload/home/' . $imageName;
+        }
+
+        $about->about_subtitle = $request->about_subtitle;
+        $about->about_title = $request->about_title;
+        $about->about_description = $request->about_description;
+        $about->about_person_name = $request->about_person_name;
+        $about->about_person_phone = $request->about_person_phone;
+        $about->about_person_email = $request->about_person_email;
+        $about->about_icon1 = $request->about_icon1;
+        $about->about_icon1_url = $request->about_icon1_url;
+        $about->about_icon2 = $request->about_icon2;
+        $about->about_icon2_url = $request->about_icon2_url;
+        $about->about_icon3 = $request->about_icon3;
+        $about->about_icon3_url = $request->about_icon3_url;
+        $about->about_icon4 = $request->about_icon4;
+        $about->about_icon4_url = $request->about_icon4_url;
+        $about->about_icon5 = $request->about_icon5;
+        $about->about_icon5_url = $request->about_icon5_url;
+        $about->about_status = $request->about_status ? 'active' : 'inactive';
+
+        $about->save();
+
+        return redirect()->back()->with('success', 'Data is updated successfully.');
     }
 
     public function homeSkill()

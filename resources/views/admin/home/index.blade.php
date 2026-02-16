@@ -24,7 +24,7 @@
             <div class="card">
 
                 <div class="card-header">
-                    <h5 class="card-title mb-0">Input Type</h5>
+                    <h5 class="card-title mb-0">Update Banner Information</h5>
                 </div><!-- end card header -->
 
                 <div class="card-body">
@@ -94,7 +94,7 @@
                                 </div>
 
                                 <div class="col-auto">
-                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                    <button type="submit" class="btn btn-primary">Update</button>
                                 </div>
 
                         </div>
