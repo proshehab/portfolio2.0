@@ -10,12 +10,15 @@ class AdminHomeController extends Controller
 {
     public function homeBanner()
     {
-        return view('admin.home.index');
+        $banner = HomePageItem::findOrFail(1);
+        return view('admin.home.index', compact('banner'));
     }
 
     public function homeBannerUpdate(Request $request)
     {
 
+        // Get the banner record (assuming single row with id = 1)
+        $banner = HomePageItem::findOrFail(1);
         //dd($request->all());
         // Validate the incoming request data
         $request->validate([
@@ -27,9 +30,6 @@ class AdminHomeController extends Controller
             'banner_button_url' => 'required|url',
             'banner_image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
-
-        // Get the banner record (assuming single row with id = 1)
-        $banner = HomePageItem::findOrFail(1);
 
         // Handle background image upload
         if ($request->hasFile('banner_image')) {
@@ -57,8 +57,7 @@ class AdminHomeController extends Controller
 
         $banner->save();
 
-        return redirect()->route('admin.home.banner.update')
-            ->with('success', 'Home banner updated successfully.');
+        return redirect()->back()->with('success', 'Data is updated successfully.');
     }
 
 
