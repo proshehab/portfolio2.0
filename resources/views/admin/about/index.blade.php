@@ -122,47 +122,62 @@
                                     </div>
 
                                     {{-- Social Icons --}}
-                                    <hr>
-                                    <h6>Social Icons</h6>
+                                    <h6>Social Media</h6>
 
-                                    @for($i = 1; $i <= 5; $i++) <div class="mb-2">
-                                        <label>Icon {{ $i }} (Class)</label>
-                                        <input type="text" name="about_icon{{ $i }}" class="form-control"
-                                            value="{{ old('about_icon'.$i, $about->{'about_icon'.$i} ?? '') }}"
-                                            placeholder="Example: fab fa-facebook-f">
+                                    <div class="mb-3">
+                                        <label class="form-label">Facebook</label>
+                                        <input type="text" name="about_icon1"
+                                            class="form-control @error('about_icon1') is-invalid @enderror"
+                                            value="{{ old('about_icon1', $about->about_icon1 ?? '') }}">
+
+                                        @error('about_icon1')
+                                        <div class="text-danger">{{ $message }}</div>
+                                        @enderror
+
+                                        <label class="form-label mt-2">Facebook URL</label>
+                                        <input type="text" name="about_icon1_url"
+                                            class="form-control @error('about_icon1_url') is-invalid @enderror" value="{{ old('about_icon1_url', $about->about_icon1_url ?? '')             
+                                            }}">
+                                        @error('about_icon1_url')
+                                        <div class="text-danger">{{ $message }}</div>
+                                        @enderror
+
+                                        <label class="form-label">Twitter</label>
+                                        <input type="text" name="about_icon2"
+                                            class="form-control @error('about_icon1') is-invalid @enderror"
+                                            class="form-control @error('about_icon2') is-invalid @enderror"
+                                            value="{{ old('about_icon2', $about->about_icon2 ?? '') }}">
+
+                                        @error('about_icon2')
+                                        <div class="text-danger">{{ $message }}</div>
+                                        @enderror
+
+                                        <label class="form-label mt-2">Twitter URL</label>
+                                        <input type="text" name="about_icon2_url"
+                                            class="form-control @error('about_icon2_url') is-invalid @enderror" value="{{ old('about_icon2_url', $about->about_icon2_url ?? '')             
+                                                                                    }}">
+                                        @error('about_icon2_url')
+                                        <div class="text-danger">{{ $message }}</div>
+                                        @enderror
+
+
+                                    </div>
+
+                                    {{-- Submit Button --}}
+                                    <div class="col-12 mt-3">
+                                        <button type="submit" class="btn btn-primary">Update</button>
+                                    </div>
+
                                 </div>
 
-                                <div class="mb-3">
-                                    <label>Icon {{ $i }} URL</label>
-                                    <input type="text" name="about_icon{{ $i }}_url" class="form-control"
-                                        value="{{ old('about_icon'.$i.'_url', $about->{'about_icon'.$i.'_url'} ?? '') }}">
-                                </div>
-                                @endfor
-
-                                {{-- Status --}}
-                                <div class="form-check mt-3">
-                                    <input type="checkbox" name="about_status" class="form-check-input" value="1" {{
-                                        old('about_status', $about->about_status ?? '') == 'active' ? 'checked' : '' }}>
-                                    <label class="form-check-label">Active</label>
-                                </div>
-
-                            </div>
-
-                            {{-- Submit Button --}}
-                            <div class="col-12 mt-3">
-                                <button type="submit" class="btn btn-primary">Update</button>
-                            </div>
+                        </form>
 
                     </div>
-
-                    </form>
-
                 </div>
-            </div>
 
+            </div>
         </div>
     </div>
-</div>
 
 </div>
 
