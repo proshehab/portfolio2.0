@@ -69,6 +69,7 @@ class AdminHomeController extends Controller
 
     public function homeAboutUpdate(Request $request)
     {
+        // dd($request->all());
         $about = HomePageItem::findOrFail(1);
 
         $request->validate([
@@ -78,17 +79,17 @@ class AdminHomeController extends Controller
             'about_person_name' => 'required|string|max:255',
             'about_person_phone' => 'required|string|max:255',
             'about_person_email' => 'required|email|max:255',
-            'about_icon1' => 'nullable|string|max:255',
-            'about_icon1_url' => 'nullable|url|max:255',
-            'about_icon2' => 'nullable|string|max:255',
-            'about_icon2_url' => 'nullable|url|max:255',
-            'about_icon3' => 'nullable|string|max:255',
-            'about_icon3_url' => 'nullable|url|max:255',
-            'about_icon4' => 'nullable|string|max:255',
-            'about_icon4_url' => 'nullable|url|max:255',
-            'about_icon5' => 'nullable|string|max:255',
-            'about_icon5_url' => 'nullable|url|max:255',
-            'about_photo' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'about_icon1' => 'required|string|max:255',
+            'about_icon1_url' => 'required|url|max:255',
+            'about_icon2' => 'required|string|max:255',
+            'about_icon2_url' => 'required|url|max:255',
+            'about_icon3' => 'required|string|max:255',
+            'about_icon3_url' => 'required|url|max:255',
+            'about_icon4' => 'required|string|max:255',
+            'about_icon4_url' => 'required|url|max:255',
+            'about_icon5' => 'required|string|max:255',
+            'about_icon5_url' => 'required|url|max:255',
+            'about_photo' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
         if ($request->hasFile('about_photo')) {

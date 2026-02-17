@@ -160,7 +160,66 @@
                                         <div class="text-danger">{{ $message }}</div>
                                         @enderror
 
+                                        <label class="form-label">LinkedIn</label>
+                                        <input type="text" name="about_icon3"
+                                            class="form-control @error('about_icon3') is-invalid @enderror"
+                                            value="{{ old('about_icon3', $about->about_icon3 ?? '') }}">
+                                        @error('about_icon3')
+                                        <div class="text-danger">{{ $message }}</div>
+                                        @enderror
 
+                                        <label class="form-label mt-2">LinkedIn URL</label>
+                                        <input type="text" name="about_icon3_url"
+                                            class="form-control @error('about_icon3_url') is-invalid @enderror" value="{{ old('about_icon3_url', $about->about_icon3_url ?? '')             
+                                            }}">
+                                        @error('about_icon3_url')
+                                        <div class="text-danger">{{ $message }}</div>
+                                        @enderror
+
+                                        <label class="form-label">Instagram</label>
+                                        <input type="text" name="about_icon4"
+                                            class="form-control @error('about_icon4') is-invalid @enderror"
+                                            value="{{ old('about_icon4', $about->about_icon4 ?? '') }}">
+                                        @error('about_icon4')
+                                        <div class="text-danger">{{ $message }}</div>
+                                        @enderror
+                                        <label class="form-label mt-2">Instagram URL</label>
+                                        <input type="text" name="about_icon4_url"
+                                            class="form-control @error('about_icon4_url') is-invalid @enderror"
+                                            value="{{ old('about_icon4_url', $about->about_icon4_url ?? '') }}">
+                                        @error('about_icon4_url')
+
+                                        <div class="text-danger">{{ $message }}</div>
+                                        @enderror
+
+                                        <label class="form-label">GitHub</label>
+                                        <input type="text" name="about_icon5"
+                                            class="form-control @error('about_icon5') is-invalid @enderror"
+                                            value="{{ old('about_icon5', $about->about_icon5 ?? '') }}">
+                                        @error('about_icon5')
+                                        <div class="text-danger">{{ $message }}</div>
+
+                                        @enderror
+                                        <label class="form-label mt-2">GitHub URL</label>
+                                        <input type="text" name="about_icon5_url"
+                                            class="form-control @error('about_icon5_url') is-invalid @enderror" value="{{ old('about_icon5_url', $about->about_icon5_url ?? '')             
+                                            }}">
+                                        @error('about_icon5_url')
+                                        <div class="text-danger">{{ $message }}</div>
+                                        @enderror
+
+
+                                        <label class="form-label mt-2">Status</label>
+                                        <select name="about_status"
+                                            class="form-control @error('about_status') is-invalid @enderror">
+                                            <option value="1" {{ old('about_status', $about->
+                                                about_status ?? '') == '1' ? 'selected' : '' }}>Active</option>
+                                            <option value="0" {{ old('about_status', $about->about_status ?? '') == '0'
+                                                ? 'selected' : '' }}>Inactive</option>
+                                        </select>
+                                        @error('about_status')
+                                        <div class="text-danger">{{ $message }}</div>
+                                        @enderror
                                     </div>
 
                                     {{-- Submit Button --}}
