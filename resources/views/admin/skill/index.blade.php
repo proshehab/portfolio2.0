@@ -30,24 +30,27 @@
                         <div class="col-lg-6">
                             <form>
                                 <div class="mb-3">
-                                    <label for="simpleinput" class="form-label">Text</label>
+                                    <label for="simpleinput" class="form-label">Subtitle</label>
                                     <input type="text" id="simpleinput" class="form-control">
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="simpleinput" class="form-label">Text</label>
+                                    <label for="simpleinput" class="form-label">Title</label>
                                     <input type="text" id="simpleinput" class="form-control">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="simpleinput" class="form-label">Text</label>
-                                    <input type="text" id="simpleinput" class="form-control">
+                                    <label class="form-label mt-2">Status</label>
+                                    <select name="about_status"
+                                        class="form-control @error('about_status') is-invalid @enderror">
+                                        <option value="1" {{ old('about_status', $about->
+                                            about_status ?? '') == '1' ? 'selected' : '' }}>Active</option>
+                                        <option value="0" {{ old('about_status', $about->about_status ?? '') == '0'
+                                            ? 'selected' : '' }}>Inactive</option>
+                                    </select>
+                                    @error('about_status')
+                                    <div class="text-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
-
-                                <div class="mb-3">
-                                    <label for="simpleinput" class="form-label">Text</label>
-                                    <input type="text" id="simpleinput" class="form-control">
-                                </div>
-
 
                                 <div class="col-auto">
                                     <button type="submit" class="btn btn-primary">Submit</button>
@@ -55,40 +58,11 @@
 
                             </form>
                         </div>
-
-                        <div class="col-lg-6">
-
-
-                            <div class="mb-3">
-                                <label for="simpleinput" class="form-label">Text</label>
-                                <input type="text" id="simpleinput" class="form-control">
-                            </div>
-                            <div class="mb-3">
-                                <label for="simpleinput" class="form-label">Text</label>
-                                <input type="text" id="simpleinput" class="form-control">
-                            </div>
-                            <div class="mb-3">
-                                <label for="simpleinput" class="form-label">Text</label>
-                                <input type="text" id="simpleinput" class="form-control">
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="simpleinput" class="form-label">Text</label>
-                                <input type="text" id="simpleinput" class="form-control">
-                            </div>
-
-                        </div>
                     </div>
                 </div>
 
             </div>
         </div>
     </div>
-
-
-
-
-
-
 </div> <!-- container-fluid -->
 @endsection
