@@ -27,16 +27,26 @@
 
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-lg-6">
-                            <form>
+                        <div class="col-lg-8">
+                            <form method="POST" action="{{ route('admin.home.skill.update') }}">
+                                @csrf
                                 <div class="mb-3">
                                     <label for="simpleinput" class="form-label">Subtitle</label>
-                                    <input type="text" id="simpleinput" class="form-control">
+                                    <input type="text" id="simpleinput" class="form-control" name="skill_subtitle"
+                                        value="{{ old('skill_subtitle', $homePageItem->skill_subtitle ?? '') }}">
+                                    @error('skill_subtitle')
+                                    <div class="text-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
 
                                 <div class="mb-3">
                                     <label for="simpleinput" class="form-label">Title</label>
-                                    <input type="text" id="simpleinput" class="form-control">
+                                    <input type="text" id="simpleinput" class="form-control" name="skill_title"
+                                        value="{{ old('skill_title', $homePageItem->skill_title ?? '') }}">
+                                    @error('skill_title')
+                                    <div class="text-danger">{{ $message }}</div>
+                                    @enderror
+
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label mt-2">Status</label>

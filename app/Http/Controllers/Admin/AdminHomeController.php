@@ -132,6 +132,23 @@ class AdminHomeController extends Controller
         return view('admin.skill.index');
     }
 
+    public function homeSkillUpdate(Request $request)
+    {
+        $request->validate([
+            'skill_subtitle' => 'required|string|max:255',
+            'skill_title' => 'required|string|max:255',
+            'skill_status' => 'required|in:1,0',
+        ]);
+
+        $homePageItem = HomePageItem::findOrFail(1);
+        $homePageItem->skill_subtitle = $request->skill_subtitle;
+        $homePageItem->skill_title = $request->skill_title;
+        $homePageItem->skill_status = $request->skill_status == '1' ? 'active' : 'inactive';
+        $homePageItem->save();
+
+        return redirect()->back()->with('success', 'Data is updated successfully.');
+    }
+
     public function homeQualification()
     {
         return view('admin.qualification.index');

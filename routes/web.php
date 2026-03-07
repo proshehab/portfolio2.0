@@ -31,6 +31,7 @@ Route::prefix('admin')->middleware('auth')->controller(DashboardController::clas
     Route::get('/homeAbout', [AdminHomeController::class, 'homeAbout'])->name('admin.home.about');
     Route::post('/homeAbout/update', [AdminHomeController::class, 'homeAboutUpdate'])->name('admin.home.about.update');
     Route::get('/homeSkill', [AdminHomeController::class, 'homeSkill'])->name('admin.home.skill');
+    Route::post('/homeSkill/update', [AdminHomeController::class, 'homeSkillUpdate'])->name('admin.home.skill.update');
     Route::get('/homeQualification', [AdminHomeController::class, 'homeQualification'])->name('admin.home.qualification');
     Route::get('/homeService', [AdminHomeController::class, 'homeService'])->name('admin.home.service');
     Route::get('/homePortfolio', [AdminHomeController::class, 'homePortfolio'])->name('admin.home.portfolio');

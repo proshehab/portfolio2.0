@@ -107,7 +107,6 @@
 
 
 
-</div> <!-- container-fluid -->!-- container-fluid -->
-
+</div> <!-- container-fluid -->
 
 @endsection
