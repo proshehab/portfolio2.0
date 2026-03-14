@@ -42,12 +42,16 @@
                                     <input type="text" id="simpleinput" class="form-control">
                                 </div>
 
+                                <div class="mb-3">
+                                    <label for="simpleinput" class="form-label">Education Title</label>
+                                    <input type="text" id="simpleinput" class="form-control">
+                                </div>
 
                                 <div class="mb-3">
-                                    <label for="example-textarea" class="form-label">Text area</label>
-                                    <textarea class="form-control" id="example-textarea" rows="5"
-                                        spellcheck="false"></textarea>
+                                    <label for="simpleinput" class="form-label">Experience Title</label>
+                                    <input type="text" id="simpleinput" class="form-control">
                                 </div>
+
 
 
                                 <div class="col-auto">
@@ -57,18 +61,7 @@
                             </form>
                         </div>
 
-                        <div class="col-lg-6">
-                            <form>
 
-                                <div class="mb-3">
-                                    <label for="formFile" class="form-label">Default file input example</label>
-                                    <input class="form-control" type="file" id="formFile">
-                                </div>
-
-
-
-                            </form>
-                        </div>
                     </div>
                 </div>
 
