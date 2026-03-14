@@ -29,16 +29,16 @@
                         <div class="col-lg-6">
                             <form>
                                 <div class="mb-3">
-                                    <label for="simpleinput" class="form-label">Text</label>
+                                    <label for="simpleinput" class="form-label">Qualification Subtitle</label>
                                     <input type="text" id="simpleinput" class="form-control">
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="simpleinput" class="form-label">Text</label>
+                                    <label for="simpleinput" class="form-label">Qualification Title</label>
                                     <input type="text" id="simpleinput" class="form-control">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="simpleinput" class="form-label">Text</label>
+                                    <label for="simpleinput" class="form-label">Qualification Status</label>
                                     <input type="text" id="simpleinput" class="form-control">
                                 </div>
 
